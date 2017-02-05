@@ -1,0 +1,257 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="42bugs">
+    <title>42 bugs - bla bla bla</title>
+    <link rel="shortcut icon" href="{% static "img/favicon.ico" %}" type="image/x-icon">
+    <link href="{% static "css/bootstrap.min.css" %}" rel="stylesheet">
+    <link href="{% static "css/home.css" %}" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- Navigation -->
+<nav class="top-navbar" role="navigation">
+    <a class="navbar-brand" href="#">42 bugs</a>
+    <ul class="hidden-xs">
+        <li>
+            <a href="/news/">Новости</a>
+        </li>
+        <li>
+            <a href="#about">О нас</a>
+        </li>
+        <li>
+            <a href="#meetings">Последние встречи</a>
+        </li>
+        <li>
+            <a href="#feedback">Обратная связь</a>
+        </li>
+    </ul>
+</nav>
+
+
+<div class="full-bg">
+    <div class="full-bg-table">
+        <div class="full-bg-cell">
+            <div class="full-bg-text">Пожалуйста подпишись или ...</div>
+            <div class="col-sm-8 col-lg-4 col-sm-offset-2 col-lg-offset-4">
+                <div class="input-group">
+                    <input type="text" class="form-control input-lg" placeholder="Email">
+                    <span class="input-group-btn">
+                        <button class="btn btn-primary btn-lg" type="button">Подписаться</button>
+                      </span>
+                </div><!-- /input-группа -->
+            </div><!-- /.col-lg-6 -->
+        </div>
+
+    </div>
+</div>
+<div class="container block">
+    <div class="row">
+        <div class="col-sm-12"><h2>Что дают встречи</h2></div>
+        <div class="col-sm-3 icon-block">
+            <i class="glyphicon glyphicon-education good-icon"></i>
+            <h3>Развития личных качеств</h3>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </div>
+        <div class="col-sm-3 icon-block">
+            <i class="glyphicon glyphicon-briefcase good-icon"></i>
+            <h3>Пополнение портфолио</h3>
+            Fusce venenatis sem quis velit efficitur gravida.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </div>
+        <div class="col-sm-3 icon-block">
+            <i class="glyphicon glyphicon-user good-icon"></i>
+            <h3>Новые знакомства</h3>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </div>
+        <div class="col-sm-3 icon-block">
+            <i class="glyphicon glyphicon-hourglass good-icon"></i>
+            <h3>Общение с единомышленниками</h3>
+            Fusce venenatis sem quis velit efficitur gravida.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </div>
+    </div>
+</div>
+
+<div id="about" class="black-block">
+    <div class="container">
+        <h2>О нас</h2>
+        Целью клуба является изучение новых веб технологий. Данная цель достигается разработкой совместных проектов на
+        встречах клуба.
+        <br>
+        <h4>Порядок встреч:</h4>
+        1. Объявление<br>
+        2. Голосование заинтересованных<br>
+        3. Выбор места встречи<br>
+        4. Подготовка к встрече: установка программ, освоение базового материала<br>
+        5. Встреча<br>
+        <div style="padding-left: 1%">
+            А) Знакомство<br>
+            Б) Распределение по командам<br>
+            В) Работа над проектом<br>
+            Г) Разбор полётов
+        </div>
+    </div>
+</div>
+
+<div class="container block">
+    <div class="row">
+        <div class="col-sm-12">
+            <h2>Отзывы участников</h2></div>
+        <div class="col-sm-3 icon-block">
+            <img class="img-responsive" src="http://placehold.it/360x240" alt="">
+            <h3>Lorem ipsum</h3>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </div>
+        <div class="col-sm-3 icon-block">
+            <img class="img-responsive" src="http://placehold.it/360x240" alt="">
+            <h3>Donec at malesuada</h3>
+            Fusce venenatis sem quis velit efficitur gravida.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </div>
+        <div class="col-sm-3 icon-block">
+            <img class="img-responsive" src="http://placehold.it/360x240" alt="">
+            <h3>Dolor sit amet</h3>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </div>
+        <div class="col-sm-3 icon-block">
+            <img class="img-responsive" src="http://placehold.it/360x240" alt="">
+            <h3>Lorem</h3>
+            Fusce venenatis sem quis velit efficitur gravida.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </div>
+    </div>
+</div>
+<div class="black-block" id="meetings">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12"><h2>Последние встречи</h2></div>
+
+            <div class="col-sm-3">
+                <div class="fff">
+                    <div class="thumbnail">
+                        <a href="#"><img class="img-responsive" src="http://placehold.it/360x240" alt=""></a>
+                    </div>
+                    <div class="caption">
+                        <h4>Встреча #11</h4>
+                        <p>Nullam Condimentum Nibh Etiam Sem</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="fff">
+                    <div class="thumbnail">
+                        <a href="#"><img class="img-responsive" src="http://placehold.it/360x240" alt=""></a>
+                    </div>
+                    <div class="caption">
+                        <h4>Встреча #10</h4>
+                        <p>Nullam Condimentum Nibh Etiam Sem</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="fff">
+                    <div class="thumbnail">
+                        <a href="#"><img class="img-responsive" src="http://placehold.it/360x240" alt=""></a>
+                    </div>
+                    <div class="caption">
+                        <h4>Встреча #9</h4>
+                        <p>Nullam Condimentum Nibh Etiam Sem</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="fff">
+                    <div class="thumbnail">
+                        <a href="#"><img class="img-responsive" src="http://placehold.it/360x240" alt=""></a>
+                    </div>
+                    <div class="caption">
+                        <h4>Встреча #8</h4>
+                        <p>Nullam Condimentum Nibh Etiam Sem</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container block" id="feedback">
+    <div class="row">
+        <div class="col-sm-12"><h2>Обратная связь</h2></div>
+        <div class='col-sm-12'>
+            <form>
+                <div class='row'>
+                    <div class='col-sm-4'>
+                        <div class='form-group'>
+                            <label>Имя</label>
+                            <input type='text' name='fname' class='form-control'/>
+                        </div>
+                        <div class='form-group'>
+                            <label>Фамилия</label>
+                            <input type='text' name='lname' class='form-control'/>
+                        </div>
+                        <div class='form-group'>
+                            <label>Email</label>
+                            <input type='text' name='email' class='form-control'/>
+                        </div>
+                        <div class='form-group'>
+                            <label>Тема</label>
+                            <select name='subject' class='form-control'>
+                                <option>Вопрос</option>
+                                <option>Предложение</option>
+                                <option>Жалоба</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class='col-sm-8'>
+                        <div class='form-group'>
+                            <label>Текст</label>
+                            <textarea class='form-control' name='message' rows='10'></textarea>
+                        </div>
+                        <div class='text-right'>
+                            <input type='submit' class='btn btn-primary' value='Отправить'/>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="footer">
+
+    <div class="container">
+        Copyright © 42bugs.ru 2016. All rights reserved.
+    </div>
+</div>
+
+
+<script src="{% static "js/jquery.min.js" %}"></script>
+<script src="{% static "js/bootstrap.min.js" %}"></script>
+
+<script>
+    $(document).ready(function () {
+        $('a[href^="#"], a[href^="."]').click(function () {
+            var scroll_el = $(this).attr('href');
+            if ($(scroll_el).length != 0) {
+                $('html, body').animate({scrollTop: $(scroll_el).offset().top}, 300);
+            }
+            return false;
+        });
+    });
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<div class="row">
+    <div class="col-md-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">[[post.title]]</div>
+            <div class="panel-body">
+                <p ng-bind-html="post.content|bbcode"></p>
+                <span class="label label-default" ng-repeat="tag in post.tags">[[tag]]</span>
+            </div>
+        </div>
+
+
+        <!--<form ng-if="user && user.id!=project.author_id">
+            <div class="panel panel-default">
+                <div class="panel-heading">Comment</div>
+                <div class="panel-body">
+                    <textarea ng-model="comment.data" class="form-control" rows="8" name="comment"
+                              placeholder="Комментарий…"></textarea>
+                </div>
+                <div class="panel-footer">
+                    <button type="submit" class="btn btn-primary btn-block" ng-click="addComment()">Добавить
+                    </button>
+                </div>
+            </div>
+        </form>-->
+
+
+        <!--<script type="text/javascript" src="//vk.com/js/api/openapi.js?136"></script>
+
+        <script type="text/javascript">
+            VK.init({apiId: 5767274, onlyWidgets: true});
+        </script>
+
+        <div id="vk_comments"></div>
+        <script type="text/javascript">
+            VK.Widgets.Comments("vk_comments", {limit: 10, width: "665", attach: "*"});
+        </script>-->
+
+        <!--<div class="media" ng-repeat="comment in comments">
+            <div class="media-left">
+                <a href="/user/[[comment.author.id]]/">
+                    <avatar name="[[comment.author.username]]" size="80" class="media-object"></avatar>
+                </a>
+            </div>
+            <div class="media-body">
+                <strong class="media-heading">
+                    <a href="/user/[[comment.author.id]]/">[[userName(comment.author)]]</a>
+                </strong>
+                <div class="pull-right text-muted">[[comment.created|timeago]]</div>
+                <p>[[comment.data]]</p>
+            </div>
+        </div>-->
+    </div>
+</div>

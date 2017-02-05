@@ -1,0 +1,52 @@
+<form class="form-horizontal">
+    <input type="hidden" name="csrfmiddlewaretoken" ng-value="csrftoken">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">Регистрация</h3>
+        </div>
+        <div class="panel-body">
+            <div class="form-group">
+                <label class="control-label col-sm-3 bold" for="login">Логин</label>
+                <div class="col-sm-9">
+                    <input ng-model="profile.login" type="text" class="form-control" name="login"/>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-sm-3 bold" for="email">E-mail</label>
+                <div class="col-sm-9">
+                    <p class="form-control-static">
+                        <input ng-model="profile.email" type="text" class="form-control" name="email"/>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <ul class="list-group">
+            <li class="list-group-item">
+                <div class="form-group">
+                    <label class="control-label col-sm-3 bold" for="password">Пароль</label>
+                    <div class="col-sm-9">
+                        <p class="form-control-static">
+                            <input ng-model="profile.password" type="password" class="form-control"
+                                   name="password"/>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label col-sm-3 bold" for="password2">Повторите пароль</label>
+                    <div class="col-sm-9">
+                        <p class="form-control-static">
+                            <input ng-model="profile.password2" type="password" class="form-control"
+                                   name="password2"/>
+                        </p>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <div class="panel-footer">
+            <a ng-click="saveProfile(profile)" class="btn btn-success btn-block">Зарегистрироваться</a>
+        </div>
+    </div>
+</form>

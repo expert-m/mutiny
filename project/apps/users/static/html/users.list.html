@@ -1,0 +1,19 @@
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th>Ник</th>
+        <th>Имя</th>
+        <th>Онлайн</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="user in users">
+        <td><a href="/user/[[user.id]]/">[[user.username]]</a></td>
+        <td>
+            [[user.first_name]] [[user.last_name]]
+            <span ng-if="!user.first_name && !user.last_name">---</span>
+        </td>
+        <td>[[user.last_login|timeago]]</td>
+    </tr>
+    </tbody>
+</table>

@@ -1,0 +1,18 @@
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th>Название</th>
+        <th>Технологический стек</th>
+        <th>Дата создания</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="project in projects">
+        <td><a href="/user/[[project.id]]/">[[project.title]]</a></td>
+        <td>
+            <span ng-repeat="tag in tech_stack">[[tag]]</span>
+        </td>
+        <td>[[project.created|timeago]]</td>
+    </tr>
+    </tbody>
+</table>

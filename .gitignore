@@ -1,0 +1,19 @@
+# Venv
+/venv/
+
+# Python
+__pycache__/
+*.py[cod]
+
+# IDEA
+.idea/
+
+# Project
+/debug.log
+
+# Translations
+*.mo
+
+# Cache
+/project/static/.webassets-cache/
+/project/static/bundle/

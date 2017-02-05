@@ -1,0 +1,28 @@
+<div>
+    <div class="post row" ng-repeat="post in posts">
+        <div class="post-header">
+            <div class="col-sm-8">
+                <h4 class="title">
+                    <a href="/post/[[post.id]]/">[[post.title]]</a>
+                </h4>
+            </div>
+            <div class="col-sm-4 text-right">
+                <h4>test</h4>
+            </div>
+        </div>
+
+        <div class="col-sm-12" ng-bind-html="post.content.substring(0, 300)|bbcode"></div>
+        <div class="col-sm-12 text-muted">
+            <div class="row">
+                <div class="col-sm-8">
+                    <span class="label label-default" ng-repeat="tag in post.tags">[[tag]]</span>
+                </div>
+                <div class="text-right col-sm-4">[[post.created|timeago]]</div>
+            </div>
+        </div>
+    </div>
+
+    <button ng-if="isMorePosts" type="button" ng-click="morePosts()" class="btn btn-default center-block">
+        <i class="glyphicon glyphicon-refresh"></i> Больше
+    </button>
+</div>

@@ -1,0 +1,152 @@
+{% load staticfiles %}
+{% load assets %}
+
+<!DOCTYPE html>
+<html lang="ru" ng-app="MainApp">
+<head>
+    <meta charset="utf-8">
+    <base href="/">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>[[title]]</title>
+    <link rel="shortcut icon" href="{% static "img/favicon.ico" %}" type="image/x-icon">
+    {% assets "all_css" %}
+        <link href="{{ ASSET_URL }}" rel="stylesheet">
+    {% endassets %}
+    {% assets "all_js" %}
+        <script type="text/javascript" src="{{ ASSET_URL }}"></script>
+    {% endassets %}
+</head>
+
+<body ng-controller="MainCtrl">
+
+<!-- Navigation -->
+<nav class="navbar navbar-newheader navbar-static-top" role="navigation">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <a href="/" class="navbar-brand">MUTINY</a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-links hidden-sm">
+                <li>
+                    <a href="/meetings/">Встречи</a>
+                </li>
+                <li>
+                    <a href="/projects/">Проекты</a>
+                </li>
+                <li>
+                    <a href="/users/">Участники</a>
+                </li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <form class="navbar-form navbar-left" ng-show="search">
+                        <div class="form-group">
+                            <input id="search" type="text" class="form-control" placeholder="Поиск">
+                        </div>
+                    </form>
+                </li>
+                <li class="hidden-sm">
+                    <a ng-click="search=!search" class="btn btn-link"><i class="glyphicon glyphicon-search"></i></a>
+                </li>
+                <li class="dropdown" ng-hide="user">
+                    <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Войти</a>
+                    <ul class="dropdown-menu" style="padding: 10px;min-width: 250px;border-radius: 4px;">
+                        <li>
+                            <form name="loginForm">
+                                <div class="form-group">
+                                    <input type="text" class="form-control"
+                                           placeholder="Логин" ng-model="auth_user.username">
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" class="form-control"
+                                           placeholder="Пароль" ng-model="auth_user.password">
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" ng-model="auth_user.remember_me"> Запомнить меня
+                                    </label>
+                                </div>
+                                <button
+                                        type="submit"
+                                        class="btn btn-success btn-block"
+                                        style="margin-left:0"
+                                        ng-click="login(auth_user)">Войти
+                                </button>
+                            </form>
+                        </li>
+                    </ul>
+                </li>
+                <li ng-hide="user">
+                    <a href="/register/" class="btn btn-primary">Регистрация</a>
+                </li>
+                <li ng-show="user">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                            [[userName(user, true)]] <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Предложить проект</a></li>
+                            <li><a href="/user/[[user.id]]/">Мой профиль</a></li>
+                            <li><a href="/user/[[user.id]]/projects/">Мои проекты</a></li>
+                            <li><a href="/messages/">Мои сообщения</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#" ng-click="logout()">Выйти</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+
+    <!-- /.container -->
+</nav>
+
+<!-- Page Content -->
+<div class="container" ng-hide="pageLoading">
+    <div class="row">
+        <div ng-class="{'col-md-8': leftBlock, 'col-md-12': !leftBlock}">
+            <div ng-view autoscroll="true"></div>
+        </div>
+
+        <div class="col-md-4 hidden-xs" ng-show="leftBlock" ng-include="'/static/html/left_block.html'">
+
+        </div>
+
+    </div>
+    <!-- /.row -->
+
+    <hr>
+
+    <!-- Footer -->
+    <footer>
+        <div class="row">
+            <div class="col-sm-4">
+                <p>
+                    Copyright &copy; Mutiny 2016
+                </p>
+            </div>
+            <div class="col-sm-2 col-sm-offset-4">
+                <a href="/help/">Помощь</a><br>
+                <a href="/search/">Поиск</a><br>
+            </div>
+            <div class="col-sm-2">
+                <a href="/rules/">Правила</a><br>
+                <a href="/feedback/">Обратная связь</a><br>
+            </div>
+            <!-- /.col-lg-12 -->
+        </div>
+        <!-- /.row -->
+    </footer>
+
+</div>
+<!-- /.container -->
+</body>
+</html>

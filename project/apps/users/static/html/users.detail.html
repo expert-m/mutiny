@@ -1,0 +1,89 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">[[userName(profile)]]</h3>
+    </div>
+    <div class="panel-body">
+        <table class="table">
+            <tbody>
+            <tr>
+                <td>Ник:</td>
+                <td>[[profile.username]]</td>
+            <tr>
+                <td>Дата регистрации:</td>
+                <td>[[profile.date_joined|date:'dd.MM.yyyy']]</td>
+            </tr>
+            <tr>
+                <td>Дата рождения:</td>
+                <td>[[profile.birthday|date:'dd.MM.yyyy']]</td>
+            </tr>
+            <tr>
+                <td>Сайт:</td>
+                <td>[[profile.website]]</td>
+            </tr>
+            <tr>
+                <td>Последние посещение:</td>
+                <td>[[profile.last_login|date:'HH:mm, dd.MM.yyyy']]</td>
+            </tr>
+
+            <tr>
+                <td>Email</td>
+                <td>[[profile.email]]</td>
+            </tr>
+            <tr>
+                <td>О себе:</td>
+                <td>[[profile.description]]</td>
+            </tr>
+            <tr>
+                <td>Cтек технологий:</td>
+                <td>[[profile.tech_stack]]</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="panel-footer">
+        <div class="modal fade" id="messageModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title">Новое сообщение</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                                    <textarea class="form-control counted" name="message"
+                                              rows="5"
+                                              style="margin-bottom:10px;" maxlength="320" ng-model="message"></textarea>
+                            <h6 class="pull-right" id="counter">[[320-message.length]] осталось</h6>
+                            <button ng-click="addMessage(profile.id, message);message=''" class="btn btn-info"
+                                    type="submit">Отправить
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <a href="#" type="button" class="btn btn-sm btn-primary"
+           data-toggle="modal" data-target="#messageModal">Написать сообщение</a>
+        <a ng-if="user.id==profile.id" href="/user/[[user.id]]/edit/" type="button" class="btn btn-sm btn-default">Редактировать</a>
+        <span class="pull-right">
+            <div class="input-group input-group-sm">
+                  <span class="input-group-btn">
+                      <button type="button" class="btn btn-danger btn-number">
+                        <span class="glyphicon glyphicon-minus"></span>
+                      </button>
+                  </span>
+                <span class="input-group-btn">
+                <button type="button" class="btn btn-default" style="border:1px solid #7C7C7C;border-radius:0;">[[profile.rating]]999</button>
+                  </span>
+                <span class="input-group-btn">
+                      <button type="button" class="btn btn-success btn-number">
+                          <span class="glyphicon glyphicon-plus"></span>
+                      </button>
+                  </span>
+            </div>
+        </span>
+    </div>
+</div>

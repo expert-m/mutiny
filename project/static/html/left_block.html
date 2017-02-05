@@ -1,0 +1,29 @@
+<div class="well" ng-hide="user">
+    <h4>Подписка</h4>
+    <div class="input-group">
+        <input type="text" class="form-control" placeholder="E-Mail">
+        <span class="input-group-btn">
+                <button class="btn btn-default" type="button">Подписаться</button>
+            </span>
+    </div>
+</div>
+
+<div class="well">
+    <h4>Встречи</h4>
+    <p>Бла бла бла бла бла бла бла бла бла бла бла бла бла</p>
+    <hr>
+    <p>Бла бла бла бла бла бла бла бла бла бла бла бла бла</p>
+    <hr>
+    <p>Бла бла бла бла бла бла бла бла бла бла бла бла бла</p>
+</div>
+
+<div class="well">
+    <h4>Популярные теги</h4>
+    <p>
+        <span class="label label-default" ng-repeat="tag in tags">[[tag.name]]</span>
+    </p>
+</div>
+
+<div class="well">
+    <h4>Статистика</h4>
+</div>

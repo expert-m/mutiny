@@ -1,0 +1,491 @@
+@font-face {
+    font-family: 'Ubuntu Mono';
+    src: url('../fonts/ubuntu/UbuntuMono-R.ttf');
+}
+
+a {
+    outline: none;
+}
+
+footer {
+    margin: 20px 0;
+}
+
+a:hover {
+    color: #000000;
+}
+
+hr {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.page-header {
+    font-family: 'Ubuntu Mono', monospace;
+    margin: 10px 0 10px;
+    color: #555;
+}
+
+.nopadding {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+/*** JUMBOTRON ***/
+.container .jumbotron {
+    padding: 10px 30px;
+    border-radius: 0;
+    background: url("../img/index_bg.jpg") no-repeat 0 10%;
+    background-size: 100%;
+    border: 5px solid #f2f2f2;
+}
+
+.container .jumbotron span, .container .jumbotron h3 {
+    color: #000;
+    background: #f2f2f2;
+    padding: 3px;
+    display: inline-block;
+}
+
+.container .jumbotron h3 span {
+    color: #c20000;
+}
+
+.container .jumbotron p {
+    font-size: 16px;
+}
+
+.container .jumbotron .btn {
+    margin-bottom: 20px;
+}
+
+/*** WELL ***/
+.well {
+    background: transparent;
+    border: 5px solid #f2f2f2;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+/*** POST ***/
+.post {
+    display: block;
+    padding: 10px 0;
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.post:nth-child(odd) {
+    background-color: #f2f2f2;
+}
+
+.post-header {
+    font-size: 20px;
+}
+
+.post-content {
+    color: #000;
+    padding: 5px 0;
+}
+
+/*** NAVBAR ***/
+.navbar-newheader {
+    font-family: 'Ubuntu Mono', monospace;
+    border-bottom: 1px solid #7C7C7C;
+    padding: 5px;
+}
+
+.navbar-newheader .navbar-links a {
+    color: #7C7C7C;
+    font-size: 16px;
+}
+
+.navbar-newheader li a:hover, .navbar-newheader li a:focus {
+    color: #505050;
+    background-color: transparent;
+}
+
+.navbar-newheader .navbar-brand {
+    color: #507299;
+    font-size: 35px;
+}
+
+.navbar-newheader .btn {
+    display: block;
+    padding: 6px 12px;
+    margin-left: 8px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.navbar-newheader .btn-link {
+    color: #7C7C7C;
+}
+
+.navbar-static-top .navbar-collapse {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+@media only screen and (max-width: 768px) {
+    .navbar-newheader .navbar-brand {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+.navbar-newheader .btn-default {
+    color: #7C7C7C;
+    border-color: #7C7C7C;
+}
+
+.navbar-newheader .btn-default:hover, .btn-default:focus {
+    color: #505050;
+    border-color: #505050;
+    background: #fff;
+}
+
+/*** BTN ***/
+
+.btn-primary, .btn-group .btn-primary:focus, .navbar-newheader .btn-primary:focus, .nav .open > a {
+    color: #fff;
+    background: #507299;
+    border: 1px solid #507299;
+}
+
+.btn-group .dropdown-toggle {
+    border-left: 1px solid #305075;
+}
+
+.btn-primary:hover, .navbar-newheader .btn-primary:hover {
+    color: #fff;
+    background: #305075;
+}
+
+.btn-success {
+    background: #00AE5A;
+}
+
+.btn-success:hover {
+    background: #00a450;
+    border: 1px solid transparent;
+}
+
+.btn-success:focus {
+    background: #00a450;
+    border: 1px solid transparent;
+}
+
+.btn-group .dropdown-menu li:hover {
+    background-color: #f2f2f2;
+}
+
+/*** ALERT ***/
+.alert-help {
+    border: 0;
+    border-radius: 0;
+    opacity: 0.5;
+}
+
+.alert-help:hover {
+    opacity: 1;
+}
+
+/*** PANEL ***/
+.panel {
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.panel-default > .panel-heading {
+    background-color: #f2f2f2;
+}
+
+/* TOASTER */
+.toast {
+    overflow: hidden;
+    margin: 0 0 6px;
+    padding: 15px 15px 15px 50px;
+    width: 300px;
+    border-radius: 3px;
+    box-shadow: 0 0 4px #999;
+    color: #fff;
+    opacity: .9;
+    background: #030303 no-repeat 15px center;
+}
+
+.toast-info {
+    background-color: #2f96b4;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGwSURBVEhLtZa9SgNBEMc9sUxxRcoUKSzSWIhXpFMhhYWFhaBg4yPYiWCXZxBLERsLRS3EQkEfwCKdjWJAwSKCgoKCcudv4O5YLrt7EzgXhiU3/4+b2ckmwVjJSpKkQ6wAi4gwhT+z3wRBcEz0yjSseUTrcRyfsHsXmD0AmbHOC9Ii8VImnuXBPglHpQ5wwSVM7sNnTG7Za4JwDdCjxyAiH3nyA2mtaTJufiDZ5dCaqlItILh1NHatfN5skvjx9Z38m69CgzuXmZgVrPIGE763Jx9qKsRozWYw6xOHdER+nn2KkO+Bb+UV5CBN6WC6QtBgbRVozrahAbmm6HtUsgtPC19tFdxXZYBOfkbmFJ1VaHA1VAHjd0pp70oTZzvR+EVrx2Ygfdsq6eu55BHYR8hlcki+n+kERUFG8BrA0BwjeAv2M8WLQBtcy+SD6fNsmnB3AlBLrgTtVW1c2QN4bVWLATaIS60J2Du5y1TiJgjSBvFVZgTmwCU+dAZFoPxGEEs8nyHC9Bwe2GvEJv2WXZb0vjdyFT4Cxk3e/kIqlOGoVLwwPevpYHT+00T+hWwXDf4AJAOUqWcDhbwAAAAASUVORK5CYII=) !important
+}
+
+.toast-error {
+    background-color: #bd362f;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHOSURBVEhLrZa/SgNBEMZzh0WKCClSCKaIYOED+AAKeQQLG8HWztLCImBrYadgIdY+gIKNYkBFSwu7CAoqCgkkoGBI/E28PdbLZmeDLgzZzcx83/zZ2SSXC1j9fr+I1Hq93g2yxH4iwM1vkoBWAdxCmpzTxfkN2RcyZNaHFIkSo10+8kgxkXIURV5HGxTmFuc75B2RfQkpxHG8aAgaAFa0tAHqYFfQ7Iwe2yhODk8+J4C7yAoRTWI3w/4klGRgR4lO7Rpn9+gvMyWp+uxFh8+H+ARlgN1nJuJuQAYvNkEnwGFck18Er4q3egEc/oO+mhLdKgRyhdNFiacC0rlOCbhNVz4H9FnAYgDBvU3QIioZlJFLJtsoHYRDfiZoUyIxqCtRpVlANq0EU4dApjrtgezPFad5S19Wgjkc0hNVnuF4HjVA6C7QrSIbylB+oZe3aHgBsqlNqKYH48jXyJKMuAbiyVJ8KzaB3eRc0pg9VwQ4niFryI68qiOi3AbjwdsfnAtk0bCjTLJKr6mrD9g8iq/S/B81hguOMlQTnVyG40wAcjnmgsCNESDrjme7wfftP4P7SP4N3CJZdvzoNyGq2c/HWOXJGsvVg+RA/k2MC/wN6I2YA2Pt8GkAAAAASUVORK5CYII=) !important
+}
+
+.toast-success {
+    background-color: #51a351;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADsSURBVEhLY2AYBfQMgf///3P8+/evAIgvA/FsIF+BavYDDWMBGroaSMMBiE8VC7AZDrIFaMFnii3AZTjUgsUUWUDA8OdAH6iQbQEhw4HyGsPEcKBXBIC4ARhex4G4BsjmweU1soIFaGg/WtoFZRIZdEvIMhxkCCjXIVsATV6gFGACs4Rsw0EGgIIH3QJYJgHSARQZDrWAB+jawzgs+Q2UO49D7jnRSRGoEFRILcdmEMWGI0cm0JJ2QpYA1RDvcmzJEWhABhD/pqrL0S0CWuABKgnRki9lLseS7g2AlqwHWQSKH4oKLrILpRGhEQCw2LiRUIa4lwAAAABJRU5ErkJggg==) !important
+}
+
+.toast-warning {
+    background-color: #f89406;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGYSURBVEhL5ZSvTsNQFMbXZGICMYGYmJhAQIJAICYQPAACiSDB8AiICQQJT4CqQEwgJvYASAQCiZiYmJhAIBATCARJy+9rTsldd8sKu1M0+dLb057v6/lbq/2rK0mS/TRNj9cWNAKPYIJII7gIxCcQ51cvqID+GIEX8ASG4B1bK5gIZFeQfoJdEXOfgX4QAQg7kH2A65yQ87lyxb27sggkAzAuFhbbg1K2kgCkB1bVwyIR9m2L7PRPIhDUIXgGtyKw575yz3lTNs6X4JXnjV+LKM/m3MydnTbtOKIjtz6VhCBq4vSm3ncdrD2lk0VgUXSVKjVDJXJzijW1RQdsU7F77He8u68koNZTz8Oz5yGa6J3H3lZ0xYgXBK2QymlWWA+RWnYhskLBv2vmE+hBMCtbA7KX5drWyRT/2JsqZ2IvfB9Y4bWDNMFbJRFmC9E74SoS0CqulwjkC0+5bpcV1CZ8NMej4pjy0U+doDQsGyo1hzVJttIjhQ7GnBtRFN1UarUlH8F3xict+HY07rEzoUGPlWcjRFRr4/gChZgc3ZL2d8oAAAAASUVORK5CYII=) !important
+}
+
+/* LABELS */
+.label {
+    margin-right: 5px;
+}
+
+/* PROGRESS-LITE */
+.ngProgressLite {
+    pointer-events: none;
+}
+
+.ngProgressLiteBar {
+    background: #507299;
+    position: fixed;
+    z-index: 99999;
+    top: 0;
+    left: 0;
+    height: 2px;
+}
+
+.ngProgressLite .ngProgressLiteBarShadow {
+    display: block;
+    position: absolute;
+    right: 0;
+    width: 100px;
+    height: 100%;
+    box-shadow: 0 0 10px #507299, 0 0 5px #507299;
+    opacity: 1;
+    -webkit-transform: rotate(3deg) translate(0px, -4px);
+    -ms-transform: rotate(3deg) translate(0px, -4px);
+    transform: rotate(3deg) translate(0px, -4px);
+}
+
+/* BBCODE */
+.xbbcode-yt {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+}
+
+.xbbcode-yt iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.xbbcode-b {
+    font-weight: bold;
+}
+
+.xbbcode-blockquote {
+
+}
+
+.xbbcode-center {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    text-align: center;
+}
+
+.xbbcode-code {
+    white-space: pre-wrap;
+    font-family: monospace;
+}
+
+.xbbcode-i {
+    font-style: italic;
+}
+
+.xbbcode-justify {
+    display: block;
+    text-align: justify;
+}
+
+.xbbcode-left {
+    display: block;
+    text-align: left;
+}
+
+.xbbcode-right {
+    display: block;
+    text-align: right;
+}
+
+.xbbcode-s {
+    text-decoration: line-through;
+}
+
+.xbbcode-size-4 {
+    font-size: 4px;
+}
+
+.xbbcode-size-5 {
+    font-size: 5px;
+}
+
+.xbbcode-size-6 {
+    font-size: 6px;
+}
+
+.xbbcode-size-7 {
+    font-size: 7px;
+}
+
+.xbbcode-size-8 {
+    font-size: 8px;
+}
+
+.xbbcode-size-9 {
+    font-size: 9px;
+}
+
+.xbbcode-size-10 {
+    font-size: 10px;
+}
+
+.xbbcode-size-11 {
+    font-size: 11px;
+}
+
+.xbbcode-size-12 {
+    font-size: 12px;
+}
+
+.xbbcode-size-13 {
+    font-size: 13px;
+}
+
+.xbbcode-size-14 {
+    font-size: 14px;
+}
+
+.xbbcode-size-15 {
+    font-size: 15px;
+}
+
+.xbbcode-size-16 {
+    font-size: 16px;
+}
+
+.xbbcode-size-17 {
+    font-size: 17px;
+}
+
+.xbbcode-size-18 {
+    font-size: 18px;
+}
+
+.xbbcode-size-19 {
+    font-size: 19px;
+}
+
+.xbbcode-size-20 {
+    font-size: 20px;
+}
+
+.xbbcode-size-21 {
+    font-size: 21px;
+}
+
+.xbbcode-size-22 {
+    font-size: 22px;
+}
+
+.xbbcode-size-23 {
+    font-size: 23px;
+}
+
+.xbbcode-size-24 {
+    font-size: 24px;
+}
+
+.xbbcode-size-25 {
+    font-size: 25px;
+}
+
+.xbbcode-size-26 {
+    font-size: 26px;
+}
+
+.xbbcode-size-27 {
+    font-size: 27px;
+}
+
+.xbbcode-size-28 {
+    font-size: 28px;
+}
+
+.xbbcode-size-29 {
+    font-size: 29px;
+}
+
+.xbbcode-size-30 {
+    font-size: 30px;
+}
+
+.xbbcode-size-31 {
+    font-size: 31px;
+}
+
+.xbbcode-size-32 {
+    font-size: 32px;
+}
+
+.xbbcode-size-33 {
+    font-size: 33px;
+}
+
+.xbbcode-size-34 {
+    font-size: 34px;
+}
+
+.xbbcode-size-35 {
+    font-size: 35px;
+}
+
+.xbbcode-size-36 {
+    font-size: 36px;
+}
+
+.xbbcode-size-37 {
+    font-size: 37px;
+}
+
+.xbbcode-size-38 {
+    font-size: 38px;
+}
+
+.xbbcode-size-39 {
+    font-size: 39px;
+}
+
+.xbbcode-size-40 {
+    font-size: 40px;
+}
+
+.xbbcode-u {
+    text-decoration: underline;
+}
+
+.xbbcode-table {
+    border-collapse: collapse;
+}
+
+.xbbcode-tr {
+
+}
+
+.xbbcode-table, .xbbcode-th, .xbbcode-td {
+    border: 1px solid #666;
+}
+

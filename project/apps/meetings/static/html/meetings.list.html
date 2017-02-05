@@ -1,0 +1,18 @@
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th>Название</th>
+        <th>Проекты</th>
+        <th>Дата создания</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="meeting in meetings">
+        <td><a href="/meeting/[[meeting.id]]/">[[meeting.title]]</a></td>
+        <td>
+            <span ng-repeat="project in projects">[[project.title]]</span>
+        </td>
+        <td>[[meeting.created|timeago]]</td>
+    </tr>
+    </tbody>
+</table>
